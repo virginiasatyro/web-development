@@ -1,2 +1,2 @@
 # WebDevelopment
-Repository to help me learning Web Development
+Repository to help me learn Web Development
