@@ -1,0 +1,2 @@
+C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\advancedObjects8\obj\Debug\advancedObjects8.njsproj.CoreCompileInputs.cache
+C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\advancedObjects8\bin\Microsoft.NodejsTools.WebRole.dll
