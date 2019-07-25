@@ -1,0 +1,69 @@
+1 - SITE STRUCTURE 
+	What are HTML and CSS?
+	
+		* HTML stands for Hyper Text Markup Language. 
+		It is used to give websites structure with text, links, images, and other fundamental elements.
+		* CSS stands for Cascading Style Sheets. It is used to change the appearance of HTML elements.
+
+	Anatomy of an HTML Element	
+	
+		<h1>You're Building a Website!</h1>
+		1 - All HTML elements begin with an opening tag. In this case, the opening tag is <h1>.
+		2 - Most elements require a closing tag, denoted by a /. In this case, the closing tag is </h1>.
+		3 - The website user only sees the content between the opening and closing tags. 
+		
+	Add a Heading
+	
+		There are six heading elements: h1, h2, h3, h4, h5, and h6. h1 is the largest heading and h6 is the smallest. 
+
+	Add a Paragraph
+	
+		<p>Paragraph text here</p>
+		he HTML paragraph element, p, is used to hold one or more sentences, just like paragraphs in an essay or a book. 
+		
+	Anchor Elements
+	
+		<a href="http://google.com">Click here for Google!</a>
+		Anchor elements use an attribute to link users to websites. 
+	
+	Adding Images
+	
+		<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-1/bikes1.jpg"/>
+		
+	Add a Video
+	
+		<video width="320" height="240" controls>
+		<source src="video-url.mp4" type="video/mp4">
+		</video>
+		
+	Create an Unordered List
+
+		<ul>
+			<li>A list item</li>
+			<li>A second list item</li>
+			<li>A third list item</li>
+		</ul> 
+		
+	Add a Div
+	
+		<div class="main">
+		...
+		</div>
+		Div elements divide your page by enclosing other elements. 
+		These enclosed groups of elements can then be organized, moved and styled independently from one another.
+		
+	Metadata: The Brains
+
+		1. <!DOCTYPE html>: Tells the web browser to expect an HTML document.
+		2. <html>...</html>: The root of the HTML document and parent of all other HTML elements on the webpage.
+		3. <head>...</head>: Enclose other metadata about the site, such as its title.
+		4. <title>...</title>: Contains the site’s title, which is one way users can find your site through a search engine, like Google.
+		5. <meta charset="utf-8"/>: Tells the web browser which character set to use. In this case, the character set is “utf-8”. 
+		
+2 - A CLOSER LOOK AS CSS 
+
+
+3 - BOUNDARIES AND SPACE 
+
+
+4 - BUILDING WITH BOOTSTRAP 
