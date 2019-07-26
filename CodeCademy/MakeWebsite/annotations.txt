@@ -60,10 +60,185 @@
 		4. <title>...</title>: Contains the site’s title, which is one way users can find your site through a search engine, like Google.
 		5. <meta charset="utf-8"/>: Tells the web browser which character set to use. In this case, the character set is “utf-8”. 
 		
-2 - A CLOSER LOOK AS CSS 
+		
+2 - A CLOSER LOOK AS CSS CD 
+	Why Use CSS?
+	
+		CSS is a language used to style websites.
+		Colors, fonts, and page layouts for a site can all be managed using CSS. 
 
-
+	Link to a Stylesheet
+	
+		The HTML link element links a CSS file to an HTML file so that CSS styling can be applied. 
+			<link rel="stylesheet" type="text/css" href="main.css"/>
+	
+	Anatomy of a CSS Rule
+	
+		The anatomy of a CSS rule:
+		* rule: a list of CSS instructions for how to style a specific HTML element or group of HTML elements.
+		* selector: specifies exactly which HTML elements to style. Here h1 is the selector.
+		* properties and values: located inside the { } brackets, properties and values specify what aspect of the selector to style. 
+		
+	font-family
+	
+			h1 {
+				font-family: Georgia, serif;
+			}
+	
+	color 
+	
+			h1 {
+				color: red;
+			}
+		1. Hexadecimal color (#RRGGBB): Hexadecimal values that represent mixtures of red, green and blue. 
+		2. RGB (Red, Green, Blue) colors: Color created by three numbers representing red, green, and blue.
+		
+	CSS Class Selectors
+	
+		We can use class selectors to target classes of HTML elements.
+			<div class="header">
+				<h2>Heading</h2>
+				<p>Paragraph</p>
+			</div>
+		Here, the div is the parent element and the h2 and p are children. 
+		CSS styles applied to the header class selector will automatically apply to the h2 and the p.
+			.header {
+				color: #ffffff; 
+			}
+			
+	font-size
+	
+			h1 {
+				font-size: 60px; 
+			}
+		1. pixel (px): Standard unit of measurement for sizing fonts and other HTML elements.
+		2. rem: Represents the default font size for the web browser. 
+		Rems can be used to ensure that HTML elements scale in proportion to each other on various web browsers and screen sizes.
+		3. em: A relative value that changes in proportion to the font-size of the element on which em is used. 
+			
+	A Background Image
+	
+		In CSS, the background-image property sets a background image of your choice for a given selector, as seen below.
+			.hero {
+				background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg");
+			}
+		To control the size of the chosen background image, use the property background-size:
+			background-size: cover;
+			
+	CSS id Selectors
+	
+		For example, to style one anchor element differently than all the others on a webpage, you could use the HTML id attribute:
+			<a id="learn-code" href="https://www.codecademy.com">Click here to learn to code!</a> 
+			#learn-code {
+				color: #2e69a3;  
+			}
+		1. An id attribute can only be used once because the id is unique to the element it is assigned to.
+		2. Ids have greater specificity than classes. 
+	
+	
 3 - BOUNDARIES AND SPACE 
+
+	The Box Model
+	
+		Every page element has boundary and space properties that can be controlled using CSS. 
+		Box model diagram:
+		* content: Includes text, images, or other media contained within an HTML element.
+		* padding: The space between the content and the border. You can think of this like inner space.
+		* border: The outline of an HTML page element. You can think of it like a picture frame that contains the element.
+		* margin: The space between the HTML page element and the next nearest element(s).
+
+	Create a Border	
+		
+		The border property can be used to visually define a page element’s outer edge.
+		In CSS, the border property’s value requires three parts:
+		* thickness: Sets the thickness of the border, using pixels, ems, or rems.
+		* type: Sets the border type. Common options are solid, dotted, and dashed. There are many others.
+		* color: Sets the border’s color, using named colors, HEX, or RGB values.
+			p {
+				border: 2px solid black; 
+			}
+			
+	Working with Padding
+
+		The CSS padding property controls the empty space between the page element’s content and its border. 
+		Increasing a page element’s padding makes the space around the content more spacious, while decreasing it makes the space more compact. 
+			p {
+				padding: 20px; 
+			}
+			
+	Working with Margin
+	
+		The CSS margin property controls the space between different HTML elements on a webpage. 
+		Use margin to bring page elements closer together or to move them further apart. 
+			.answer {
+				margin: 2rem;
+			}
+
+	More Margins
+	
+		Additional margin properties:
+		* margin-top: Sets the top margin.
+		* margin-bottom: Sets the bottom margin.
+		* margin-left: Sets the left margin.
+		* margin-right: Sets the right margin.
+
+	Understanding Display
+	
+		Using borders, padding, and margins allows us to control boundaries and space for individual HTML elements. 
+		Display types determine how HTML elements will be arranged in relation to each other.
+		The diagram to the right illustrates the block and inline display types.
+	
+	Keep It Inline
+	
+			li {
+				display: inline;
+			}
+			
+	Using Float
+	
+		By using float, we have the option of floating elements left or right. 
+			.logo {
+				float: left; 
+			}
+			#search-bar {
+				float: right; 
+			}
+			
+	Display: Flex
+	
+			.parent {
+				display: flex;
+				flex-wrap: wrap; 
+				justify-content: center;
+			}
+	
+	Working with Position
+	
+		The CSS position property enables you to position HTML elements in exact locations on a webpage. 
+		One useful value for this property is relative. 
+		This value positions page elements on a webpage relative to where they would normally appear!
+		By first setting position: relative;, you can then use the CSS properties top, left, bottom, and right to shift an element away from where it would have normally appeared on the page.
+			.container {
+				position: relative; 
+				top: 10px; 
+				left: 20px;
+			}
+			
+	Review
+
+		
+    CSS Box Model: illustrates the space and boundary properties of an HTML element that can be controlled using CSS.
+
+CSS Skills
+
+    * border: sets the outline of an HTML page element, like a picture frame that contains the element.
+    * padding: sets the amount of space between an element’s content and its border.
+    * margin: sets the amount of space between an HTML element and the next nearest element(s).
+    * display: property that determines how the selected element will be arranged in relation to other HTML elements on the page.
+    * inline: display value used to arrange HTML elements on the same line as neighboring elements.
+    * flex: display value that allows us to easily align multiple page elements vertically or horizontally.
+    * float: property used to float HTML elements left or right of neighboring elements.
+    * position: property used to position HTML elements in exact locations on a webpage.
 
 
 4 - BUILDING WITH BOOTSTRAP 
