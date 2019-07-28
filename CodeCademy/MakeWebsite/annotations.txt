@@ -242,3 +242,106 @@ CSS Skills
 
 
 4 - BUILDING WITH BOOTSTRAP 
+
+	CSS Frameworks 
+		
+		Bootstrap is a popular CSS framework with prewritten CSS rules designed to help you build webpages faster. 
+		1. header: Used to organize headers on a webpage.
+		2. footer: Used to organize footers on a webpage.
+		3. section: Defines sections on a webpage.
+
+	Connecting to Bootstrap
+
+		Before Bootstrap can work for us, we need to link to it. 
+			<head>
+				... 
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+				...
+			</head>
+			
+	On the Grid
+	
+		One of the reasons Bootstrap and frameworks like it are so popular is because they offer grids. 
+		A grid makes it possible to organize HTML elements using preconfigured columns.
+		Using a grid, you can customize responsive page layouts quickly and reliably.
+		The Bootstrap grid contains 12 equal-sized columns, as seen in the diagram on the right.
+		HTML elements are arranged to span different numbers of columns in order to create custom page layouts. 
+		
+	Header/Navigation
+	
+		An HTML header element with Bootstrap’s predefined container class is used:
+			<header class="container">
+				...
+			</header>
+		Inside the header, a row is created by using a div with Bootstrap’s row class:
+			<header class="container">
+				<div class="row">
+				</div> 
+			</header>
+		Finally, the row is cut into two parts:
+			<header class="container">
+			  <div class="row">
+				<h1 class="col-sm-4">Heading</h1>
+				<nav class="col-sm-8 text-right">
+				  <p>nav item 1</p>
+				  <p>nav item 2</p>
+				  <p>nav item 3</p>
+				</nav> 
+			  </div>
+			</header>
+		The first part consists of the h1 with Bootstrap’s class col-sm-4. 
+		It will take up the first four columns on the grid. The second part consists of the nav element with class col-sm-8. 
+		It will take up the remaining eight grid columns .text-right indicates that text will be arranged on the right side of the nav. 
+		
+	The Jumbotron
+	
+		In addition to a header/navigation, many websites have a large showcase area featuring important content. 
+		Bootstrap refers to this as a jumbotron. 
+			<section class="jumbotron">
+				<div class="container">
+					<div class="row text-center">
+						...
+					</div>
+				</div>
+			</section>
+		
+	Supporting Content
+	
+		Many websites have a supporting content area.
+		Supporting content can be arranged using Bootstrap’s grid.
+		First, an HTML section element with the container class is used:
+			<section class="container">
+			</section>
+		Next, div elements with the row class are added:
+			<section class="container">
+			  <div class="row">
+			  </div>
+			  <div class="row">
+			  </div>
+			</section>
+			
+	Footers
+	
+		Footers display copyright information, social media links, and sometimes, site navigation. 
+		First, a footer element with Bootstrap’s container class is used:
+			<footer class="container">
+			</footer>
+		Inside the footer, a div with Bootstrap’s row class is added to hold footer content:
+			<footer class="container">
+			  <div class="row">
+			  ... 
+			  </div>
+			</footer>
+			
+	Bootstrap Generalizations
+	
+		Web Concepts
+		* CSS Framework: Set of prewritten CSS rules designed to help you build webpages faster.
+		* Bootstrap Grid: 12 equal-sized columns which can be utilized via Bootstrap classes to build responsive page layouts quickly and reliably.
+
+		Bootstrap classes
+		* row: Arranges HTML elements in rows, and can be useful when building headers/navigation menus, main feature sections, supporting content sections and footers.
+		* jumbotron: Used to create large showcase sections featuring important content.
+		* col-sm-*: Used to span a specified number of columns on the Bootstrap grid. The “sm” is short for “small”, and maintains desired CSS layouts on small screens (tablet-sized).
+		* text-right: Bootstrap class used to orient text to the right side of the webpage.
+		* btn btn-primary: Bootstrap class used to style page elements as buttons.
