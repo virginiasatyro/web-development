@@ -253,6 +253,139 @@ Let’s review what you’ve learned so far:
 
 ### HTML Document Standards
 
+#### Preparing for HTML
+
+Now that you’ve learned about some of the most common HTML elements, it’s time to learn how to set up an HTML file.
+
+HTML files require certain elements to set up the document properly. You can let web browsers know that you are using HTML by starting your document with a document type declaration.
+
+The declaration looks like this:
+
+<!DOCTYPE html*>
+
+This declaration is an instruction, and it must be the first line of code in your HTML document. It tells the browser what type of document to expect, along with what version of HTML is being used in the document. For now, the browser will correctly assume that the html in <!DOCTYPE html> is referring to HTML5, as it is the current standard.
+
+In the future, however, a new standard will override HTML5. To make sure your document is forever interpreted correctly, always include <!DOCTYPE html> at the very beginning of your HTML documents.
+
+Lastly, HTML code is always saved in a file with an .html extension.
+
+#### The <html> tag
+
+The <!DOCTYPE html> declaration provides the browser with two pieces of information (the type of document and the HTML version to expect), but it doesn’t actually add any HTML structure or content.
+
+To create HTML structure and content, we must add opening and closing <html> tags after declaring <!DOCTYPE html*>:
+
+``` 
+<!DOCTYPE html>
+<html>
+
+</html>
+```
+Anything between the opening <html*> and closing </html*> tags will be interpreted as HTML code. Without these tags, it’s possible that browsers could incorrectly interpret your HTML code.
+
+#### The Head
+
+So far you’ve done two things to set up the file properly:
+
+- Declared to the browser that your code is HTML with <!DOCTYPE html*>
+- Added the HTML element (<html*>) that will contain the rest of your code.
+
+We have added these elements to the Brown Bears page you previously created. Now, let’s also give the browser some information about the page itself. We can do this by adding a <head*> element.
+
+Remember the <body*> tag? The <head*> element is part of this HTML metaphor. It goes above our <body*> element.
+
+The <head*> element contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the <body*> tag, the metadata in the head is information about the page itself. You’ll see an example of this in the next exercise.
+
+The opening and closing head tags typically appear as the first item after your first HTML tag:
+```
+<head>
+</head>
+```
+
+#### Page Titles
+
+What kind of metadata about the web page can the <head*> element contain?
+
+If you navigate to the Codecademy catalog and look at the top of your browser, you’ll notice the words Catalog | Codecademy, which is the title of the web page.
+
+A browser’s tab displays the title specified in the <title*> tag. The <title*> tag is always inside of the <head*>.
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Coding Journal</title>
+  </head>
+</html>
+```
+If we were to open a file containing the HTML code in the example above, the browser would display the words My Coding Journal in the title bar (or in the tab’s title).
+
+#### Where Does the Title Appear?
+
+Good work! Unfortunately, the browser panel used by the Codecademy environment does not have a title bar, so the “Brown Bear” title you wrote in the previous exercise will not be displayed. Outside of the Codecademy environment, however, your title would appear as depicted in the diagram to the right.
+
+So far, we have learned about:
+- <!DOCTYPE html*>, the declaration specifying the version of HTML for the browser
+- The <html*> tags that enclose all of your HTML code
+- The <head*> tag that contains the metadata of a webpage, such as its <title*>
+
+Next, you will learn about new types of elements that go inside the body.
+
+#### Linking to Other Web Pages
+
+One of the powerful aspects of HTML (and the Internet), is the ability to link to other web pages.
+You can add links to a web page by adding an **anchor element** <a*> and including the text of the link in between the opening and closing tags.
+```
+<a>This Is A Link To Wikipedia</a>
+```
+Wait a minute! Technically, the link in the example above is incomplete. How exactly is the link above supposed to work if there is no URL that will lead users to the actual Wikipedia page?
+
+The anchor element in the example above is incomplete without the **href attribute**. This attribute stands for **hyperlink reference** and is used to link to a path, or the address to where a file is located (whether it is on your computer or another location). The paths provided to the href attribute are often URLs.
+```
+<a href="https://www.wikipedia.org/">This Is A Link To Wikipedia</a>
+```
+In the example above, the href attribute has been set to the value of the URL https://www.wikipedia.org/. The example now shows the correct use of an anchor element.
+
+When reading technical documentation, you may come across the term hyperlink. Not to worry, this is simply the technical term for link. These terms are often used interchangeably.
+
+#### Opening Links in a New Window
+
+Have you ever clicked on a link and observed the resulting web page open in a new browser window? If so, you can thank the <a*> element’s target attribute. The target attribute specifies how a link should open.
+
+It’s possible that one or more links on your web page link to an entirely different website. In that case, you may want users to read the linked website, but hope that they return to your web page. This is exactly when the target attribute is useful!
+
+For a link to open in a new window, the target attribute requires a value of ```_blank```. The target attribute can be added directly to the opening tag of the anchor element, just like the href attribute.
+```
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">The Brown Bear</a>
+```
+In the example above, setting the target attribute to ```_blank``` instructs the browser to open the relevant Wikipedia page in a new window.
+
+In this exercise, we’ve used the terminology “open in a new window.” It’s likely that you are using a modern browser that opens up websites in new tabs, rather than new windows. Before the advent of browsers with tabs, additional browser windows had to be opened to view more websites. The ```target="_blank"``` attribute, when used in modern browsers, will open new websites in a new tab.
+
+
+
+
+
+
+
+#### HTML Tags
+
+You now know all of the basic elements and set-up you need to structure an HTML page and add different types of content. With the help of CSS, very soon you’ll be creating beautiful websites!
+
+While some tags have a very specific purpose, such as image and video tags, most tags are used to describe the content that they surround, which **helps us modify and style our content later**. There are seemingly infinite numbers of tags to use (many more than we’ve taught). Knowing when to use each one is based on how you want to describe the content of your HTML. Descriptive, **well-chosen tags are one key to high-quality web development**. A full list of available HTML tags can be found in Mozilla documentation.
+
+Let’s review what you’ve learned this lesson:
+
+- The <!DOCTYPE html*> declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.
+- The <html> element will contain all of your HTML code.
+- Information about the web page, like the title, belongs within the <head> of the page.
+- You can add a title to your web page by using the <title*> element, inside of the head.
+- A webpage’s title appears in a browser’s tab.
+- Anchor tags (<a*>) are used to link to internal pages, external pages or content on the same page.
+- You can create sections on a webpage and jump to them using <a> tags and adding ids to the elements you wish to jump to.
+- Whitespace between HTML elements helps make code easier to read while not changing how elements appear in the browser.
+- Indentation also helps make code easier to read. It makes parent-child relationships visible.
+- Comments are written in HTML using the following syntax: <!-- comment -->.
+
 ## 2 TABLES
 
 ### Tables
