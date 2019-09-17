@@ -359,13 +359,127 @@ For a link to open in a new window, the target attribute requires a value of ```
 ```
 In the example above, setting the target attribute to ```_blank``` instructs the browser to open the relevant Wikipedia page in a new window.
 
-In this exercise, we’ve used the terminology “open in a new window.” It’s likely that you are using a modern browser that opens up websites in new tabs, rather than new windows. Before the advent of browsers with tabs, additional browser windows had to be opened to view more websites. The ```target="_blank"``` attribute, when used in modern browsers, will open new websites in a new tab.
+In this exercise, we’ve used the terminology “open in a new window.” It’s likely that you are using a modern browser that opens up websites in new tabs, rather than new windows. Before the advent of browsers with tabs, additional browser windows had to be opened to view more websites. The ```target="_blank"``` attribute, when used in modern browsers, will open new websites in a **new tab**.
 
+#### Linking to Relative Page
 
+Thus far you have learned how to link to external web pages. Many sites also link to internal web pages like Home, About, and Contact.
 
+Before we learn how to link between internal pages, let’s establish where our files are stored. When making multi-page static websites, web developers often store HTML files in the root directory, or a main folder where all the files for the project are stored. As the size of the projects you create grows, you may use additional folders within the main project folder to organize your code.
+```
+project-folder/
+|—— about.html
+|—— contact.html
+|—— index.html
+```
+The example above shows three different files — about.html, contact.html, and index.html in one folder.
 
+HTML files are often stored in the same folder, as shown in the example above. If the browser is currently displaying index.html, it also knows that about.html and contact.html are in the same folder. Because the files are stored in the same folder, we can link web pages together using a relative path.
+```
+<a href="./contact.html">Contact</a>
+```
+In this example, the <a*> tag is used with a relative path to link from the current HTML file to the contact.html file in the same folder. On the web page, Contact will appear as a link.
 
+A relative path is a filename that shows the path to a local file (a file on the same website, such as ./index.html) versus an absolute path (a full URL, like https://www.codecademy.com/learn/learn-html which is stored in a different folder). The ./ in ./index.html tells the browser to look for the file in the current folder.
 
+#### Linking At Will
+
+You’ve probably visited websites where not all links were made up of text. Maybe the links you clicked on were images or some other form of content. So far, we’ve added links that were made up of only text, like the following:
+```
+<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank">Prickly Pear</a>
+```
+Text-only links, however, would significantly decrease your flexibility as a web developer!
+
+Thankfully, HTML allows you to **turn nearly any element into a link by wrapping that element with an anchor element**. With this technique, it’s possible to turn images into links by simply wrapping the <img*> element with an <a*> element.
+
+```
+<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="#" alt="A red prickly pear fruit"/></a>
+```
+In the example above, an image of a prickly pear has been turned into a link by wrapping the outside of the <img*> element with an <a*> element.
+
+#### Linking to Same Page
+
+At this point, we have all the content we want on our page. Since we have so much content, it doesn’t all fit on the screen. How do we make it easier for a user to jump to different portions of our page? When users visit our site, we want them to be able to click a link and have the page automatically scroll to a specific section.
+
+In order **to link to a target on the same page**, we must give the target an id, like this:
+```
+<p id="top">This is the top of the page!</p>
+<h1 id="bottom">This is the bottom! </h1>
+```
+In this example, the ```<p>``` element is assigned an id of “top” and the ```<h1>``` element is assigned “bottom.” An id can be added to most elements on a webpage.
+
+An id should be descriptive to make it easier to remember the purpose of a link. The target link is a string containing the # character and the target element’s id.
+```
+<ol>
+  <li><a href="#top">Top</a></li>
+  <li><a href="#bottom">Bottom</a></li>
+</ol>
+```
+In the example above, the links to ```<p id="top">``` and ```<h1 id="bottom">``` are embedded in an ordered list. These links appear in the browser as a numbered list of links. An id is especially helpful for organizing content belonging to a div!
+
+#### Whitespace
+
+The rest of this lesson will focus on some tools developers use to make code easier to interpret.
+
+As the code in an HTML file grows, it becomes increasingly difficult to keep track of how elements are related. Programmers use two tools to visualize the relationship between elements: whitespace and indentation.
+
+Both tools take advantage of the fact that the position of elements in a browser is independent of the amount of whitespace or indentation in the index.html file.
+
+For example, if you wanted to increase the space between two paragraphs on your web page, you would not be able to accomplish this by adding space between the paragraph elements in the index.html file. The browser ignores whitespace in HTML files when it renders a web page, so it can be used as a tool to make code easier to read and follow.
+
+What makes the example below difficult to read?
+```
+<body><p>Paragraph 1</p><p>Paragraph 2</p></body>
+```
+You have to read the entire line to know what elements are present. Compare the example above to this:
+```
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+</body>
+```
+This example is easier to read, because each element is on its own line. While the first example required you to read the entire line of code to identify the elements, this example makes it easy to identify the body tag and two paragraphs.
+
+A browser renders both examples the same way:
+
+Paragraph 1
+Paragraph 2
+
+In the next exercise you will learn how to use indentation to help visualize nested elements.
+
+#### Indentation
+
+The second tool web developers use to make the structure of code easier to read is indentation. The spaces are inserted using the space and tab bars on your keyboard.
+
+The **World Wide Web Consortium**, or **W3C**, is responsible for maintaining the style standards of HTML. At the time of writing, the W3C recommends 2 spaces of indentation when writing HTML code. Although your code will work without exactly two spaces, this standard is followed by the majority of professional web developers. Indentation is used to easily visualize which elements are nested within other elements.
+```
+<body>
+  <p>Paragraph 1</p>
+  <div>
+    <p>Paragraph 2</p>
+  </div>
+</body>
+```
+In the example above, Paragraph 1 and the ```<div>``` tag are nested inside of the ```<body>``` tag, so they are indented two spaces. The Paragraph 2 element is nested inside of the ```<div>``` tag, so it is indented an additional two spaces.
+
+#### Comments
+
+HTML files also allow you to add comments to your code. Comments begin with ```<!-- and end with -->```. Any characters in between will be ignored by your browser.
+```
+<!-- This is a comment that the browser will not display. -->
+```
+Including comments in your code is helpful for many reasons:
+- They help you (and others) understand your code if you decide to come back and review it at a much later date.
+- They allow you to experiment with new code, without having to delete old code.
+```
+<!-- Favorite Films Section -->
+<p>The following is a list of my favorite films:</p>
+```
+In this example, the comment is used to denote that the following text makes up a particular section of the page.
+```
+<!-- <p> Test Code </p> -->
+```
+In the example above, a valid HTML element (a paragraph element) has been “commented out.” This practice is useful when there is code you want to experiment with, or return to, in the future.
 
 #### HTML Tags
 
@@ -375,16 +489,16 @@ While some tags have a very specific purpose, such as image and video tags, most
 
 Let’s review what you’ve learned this lesson:
 
-- The <!DOCTYPE html*> declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.
-- The <html> element will contain all of your HTML code.
-- Information about the web page, like the title, belongs within the <head> of the page.
-- You can add a title to your web page by using the <title*> element, inside of the head.
+- The ```<!DOCTYPE html>``` declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.
+- The ```<html>``` element will contain all of your HTML code.
+- Information about the web page, like the title, belongs within the ```<head>``` of the page.
+- You can add a title to your web page by using the ```<title>``` element, inside of the head.
 - A webpage’s title appears in a browser’s tab.
-- Anchor tags (<a*>) are used to link to internal pages, external pages or content on the same page.
-- You can create sections on a webpage and jump to them using <a> tags and adding ids to the elements you wish to jump to.
+- Anchor tags (```<a>```) are used to link to internal pages, external pages or content on the same page.
+- You can create sections on a webpage and jump to them using ```<a>``` tags and adding ids to the elements you wish to jump to.
 - Whitespace between HTML elements helps make code easier to read while not changing how elements appear in the browser.
 - Indentation also helps make code easier to read. It makes parent-child relationships visible.
-- Comments are written in HTML using the following syntax: <!-- comment -->.
+- Comments are written in HTML using the following syntax: ```<!-- comment -->```.
 
 ## 2 TABLES
 
