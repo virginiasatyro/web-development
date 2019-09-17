@@ -16,7 +16,7 @@ Learning HTML is the first step in creating websites, but even a bit of knowledg
 
 #### HTML Anatomy
 
-HTML is composed of elements. These elements structure the webpage and define its content. The paragraph element is made up of one opening tag (<p*>), the content (“Hello World!” text), and a closing tag (</p*>). A tag and the content between it is called an HTML element. There are many tags that we can use to organize and display text and other types of content, like images. 
+HTML is composed of elements. These elements structure the webpage and define its content. The paragraph element is made up of one opening tag (```<p>```), the content (“Hello World!” text), and a closing tag (```</p>```). A tag and the content between it is called an HTML element. There are many tags that we can use to organize and display text and other types of content, like images. 
 
 - **HTML element** (or simply, element) — a unit of content in an HTML document formed by HTML tags and the text or media it contains.
 - **HTML Tag** — the element name, surrounded by an opening (<) and closing (>) angle bracket.
@@ -41,14 +41,14 @@ Once the file has a body, many different types of content – including text, im
 
 #### HTML Structure
 
-HTML is organized as a collection of family tree relationships. As you saw in the last exercise, we placed <p*> tags within <body*> tags. When an element is contained inside another element, it is considered the child of that element. The child element is said to be nested inside of the parent element.
+HTML is organized as a collection of family tree relationships. As you saw in the last exercise, we placed ```<p>``` tags within ```<body>``` tags. When an element is contained inside another element, it is considered the child of that element. The child element is said to be nested inside of the parent element.
 ```
 <body>
   <p>This paragraph is a child of the body</p>
 </body>
 ```
 
-In the example above, the <p*> element is nested inside the <body*> element. The <p*> element is considered a child of the <body*> element, and the <body*> element is considered the parent. You can also see that we’ve added two spaces of indentation (using the space bar) for better readability.
+In the example above, the ```<p>``` element is nested inside the ```<body>``` element. The ```<p>``` element is considered a child of the ```<body>``` element, and the ```<body>``` element is considered the parent. You can also see that we’ve added two spaces of indentation (using the space bar) for better readability.
 
 Since there can be multiple levels of nesting, this analogy can be extended to grandchildren, great-grandchildren, and beyond. The relationship between elements and their ancestor and descendent elements is known as hierarchy.
 
@@ -61,7 +61,7 @@ Let’s consider a more complicated example that uses some new tags:
   </div>
 </body>
 ```
-In this example, the <body*> element is the parent of the <div*> element. Both the <h1*> and <p*> elements are children of the <div*> element. Because the <h1*> and <p*> elements are at the same level, they are considered siblings and are both grandchildren of the <body*> element.
+In this example, the ```<body>``` element is the parent of the ```<div>``` element. Both the ```<h1>``` and ```<p>``` elements are children of the ```<div>``` element. Because the ```<h1>``` and ```<p>``` elements are at the same level, they are considered siblings and are both grandchildren of the ```<body>``` element.
 
 Understanding HTML hierarchy is important because child elements can inherit behavior and styling from their parent element. You’ll learn more about webpage hierarchy when you start digging into CSS.
 
@@ -86,7 +86,7 @@ The following example code uses a headline intended to capture a reader’s atte
 ```
 #### Divs 
 
-One of the most popular elements in HTML is the <div*> element. <div*> is short for “division” or a container that divides the page into sections. These sections are very useful for grouping elements in your HTML together.
+One of the most popular elements in HTML is the ```<div>``` element. ```<div>``` is short for “division” or a container that divides the page into sections. These sections are very useful for grouping elements in your HTML together.
 ```
 <body>
   <div>
@@ -95,7 +95,7 @@ One of the most popular elements in HTML is the <div*> element. <div*> is short 
   </div>
 </body>
 ```
-<div>s can contain any text or other HTML elements, such as links, images, or videos. Remember to always add two spaces of indentation when you nest elements inside of <div>s for better readability.
+```<div>```s can contain any text or other HTML elements, such as links, images, or videos. Remember to always add two spaces of indentation when you nest elements inside of ```<div>```s for better readability.
   
 #### Attributes
 
@@ -104,9 +104,9 @@ If we want to expand an element’s tag, we can do so using an attribute. Attrib
     The name of the attribute
     The value of the attribute
 
-One commonly used attribute is the id. We can use the id attribute to specify different content (such as <div*>s) and is really helpful when you use an element more than once. ids have several different purposes in HTML, but for now, we’ll focus on how they can help us identify content on our page.
+One commonly used attribute is the id. We can use the id attribute to specify different content (such as ```<div>```s) and is really helpful when you use an element more than once. ids have several different purposes in HTML, but for now, we’ll focus on how they can help us identify content on our page.
 
-When we add an id to a <div*>, we place it in the opening tag:
+When we add an id to a ```<div>```, we place it in the opening tag:
 ```
 <div id="intro">
   <h1>Introduction</h1>
@@ -129,15 +129,15 @@ Take a look at each of these elements in action below:
   <p><span>Self-driving cars</span> are anticipated to replace up to 2 million jobs over the next two decades.</p>
 </div>
 ```
-In the example above, there are two different <div*>. The second <div*> contains a <p*> with <span*>Self-driving cars</span*>. This <span*> element separates “Self-driving cars” from the rest of the text in the paragraph.
+In the example above, there are two different ```<div>```. The second ```<div>``` contains a ```<p>``` with ```<span>Self-driving cars</span>```. This ```<span>``` element separates “Self-driving cars” from the rest of the text in the paragraph.
 
-It’s best to use a <span*> element when you want to target a specific piece of content that is inline, or on the same line as other text. If you want to divide your content into blocks, it’s better to use a <div*>.
+It’s best to use a ```<span>``` element when you want to target a specific piece of content that is inline, or on the same line as other text. If you want to divide your content into blocks, it’s better to use a ```<div>```.
 
 #### Styling Text
 
-You can also style text using HTML tags. The <em*> tag emphasizes text, while the <strong*> tag highlights important text.
+You can also style text using HTML tags. The ```<em>``` tag emphasizes text, while the ```<strong>``` tag highlights important text.
 
-Later, when you begin to style websites, you will decide how you want browsers to display content within <em*> and <strong*> tags. Browsers, however, have built-in style sheets that will generally style these tags in the following ways:
+Later, when you begin to style websites, you will decide how you want browsers to display content within ```<em>``` and ```<strong>``` tags. Browsers, however, have built-in style sheets that will generally style these tags in the following ways:
 
     The <em> tag will generally render as italic emphasis.
     The <strong> will generally render as bold emphasis.
@@ -146,9 +146,9 @@ Take a look at each style in action:
 ```
 <p><strong>The Nile River</strong> is the <em>longest</em> river in the world, measuring over 6,850 kilometers long (approximately 4,260 miles).</p>
 ```
-In this example, the <strong*> and <em*> tags are used to emphasize the text to produce the following:
+In this example, the ```<strong>``` and ```<em>``` tags are used to emphasize the text to produce the following:
 
-<p><strong>The Nile River</strong> is the <em>longest</em> river in the world, measuring over 6,850 kilometers long (approximately 4,260 miles).</p>
+```<p><strong>The Nile River</strong> is the <em>longest</em> river in the world, measuring over 6,850 kilometers long (approximately 4,260 miles).</p>```
 
 As we can see, “The Nile River” is bolded and “longest” is in italics.
 
@@ -156,9 +156,9 @@ As we can see, “The Nile River” is bolded and “longest” is in italics.
 
 In addition to organizing text in paragraph form, you can also display content in an easy-to-read list.
 
-In HTML, you can use an unordered list tag (<ul*>) to create a list of items in no particular order. An unordered list outlines individual list items with a bullet point.
+In HTML, you can use an unordered list tag (```<ul>```) to create a list of items in no particular order. An unordered list outlines individual list items with a bullet point.
 
-The <ul*> element should not hold raw text and won’t automatically format raw text into an unordered list of items. Individual list items must be added to the unordered list using the <li*> tag. The <li*> or list item tag is used to describe an item in a list.
+The ```<ul>``` element should not hold raw text and won’t automatically format raw text into an unordered list of items. Individual list items must be added to the unordered list using the ```<li>``` tag. The ```<li>``` or list item tag is used to describe an item in a list.
 ```
 <ul>
   <li>Limes</li>
@@ -166,7 +166,7 @@ The <ul*> element should not hold raw text and won’t automatically format raw 
   <li>Chicken</li>
 </ul>
 ```
-In the example above, the list was created using the <ul*> tag and all individual list items were added using <li*> tags.
+In the example above, the list was created using the ```<ul>``` tag and all individual list items were added using ```<li>``` tags.
 
 The output will look like this:
 <ul>
@@ -177,9 +177,9 @@ The output will look like this:
 
 #### Ordered Lists
 
-Ordered lists (<ol*>) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
+Ordered lists (```<ol>```) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
 
-You can create the ordered list with the <ol*> tag and then add individual list items to the list using <li*> tags.
+You can create the ordered list with the ```<ol>``` tag and then add individual list items to the list using ```<li>``` tags.
 ```
 <ol>
   <li>Preheat the oven to 350 degrees.</li>
@@ -201,11 +201,11 @@ The output will look like this:
 
 All of the elements you’ve learned about so far (headings, paragraphs, lists, and spans) share one thing in common: they’re composed entirely of text! What if you want to add content to your web page that isn’t composed of text, like images?
 
-The <img*> tag allows you to add an image to a web page. Most elements require both opening and closing tags, but the <img*> tag is a self-closing tag. Note that the end of the <img> tag has a forward slash /. Self-closing tags may include or omit the final slash — both will render properly.
+The ```<img>``` tag allows you to add an image to a web page. Most elements require both opening and closing tags, but the ```<img>``` tag is a self-closing tag. Note that the end of the ```<img>``` tag has a forward slash /. Self-closing tags may include or omit the final slash — both will render properly.
 ```
 <img src="image-location.jpg" />
 ```
-The <img*> tag has a required attribute called src. The src attribute must be set to the image’s source, or the location of the image. In this case, the value of src must be the uniform resource locator (URL) of the image. A URL is the web address or local address where a file is stored.
+The ```<img>``` tag has a required attribute called src. The src attribute must be set to the image’s source, or the location of the image. In this case, the value of src must be the uniform resource locator (URL) of the image. A URL is the web address or local address where a file is stored.
 
 #### Image Alts
 
@@ -224,7 +224,7 @@ If the image on the web page is not one that conveys any meaningful information 
 
 #### Videos
 
-In addition to images, HTML also supports displaying videos. Like the <img*> tag, the <video*> tag requires a src attribute with a link to the video source. Unlike the <img*> tag however, the <video*> element requires an opening and a closing tag.
+In addition to images, HTML also supports displaying videos. Like the ```<img>``` tag, the ```<video>``` tag requires a src attribute with a link to the video source. Unlike the ```<img>``` tag however, the ```<video>``` element requires an opening and a closing tag.
 ```
 <video src="myVideo.mp4" width="320" height="240" controls>
   Video not supported
@@ -243,13 +243,13 @@ Let’s review what you’ve learned so far:
 - HTML stands for HyperText Markup Language and is used to create the structure and content of a webpage.
 - Most HTML elements contain opening and closing tags with raw text or other HTML tags between them.
 - HTML elements can be nested inside other elements. The enclosed element is the child of the enclosing parent element.
-- Any visible content should be placed within the opening and closing <body*> tags .
-- Headings and sub-headings, <h1*> to <h6*> tags, are used to enlarge text.
-- <p*>, <span*> and <div*> tags specify text or blocks.
-- The <em*> and <strong*> tags are used to emphasize text.
-- Line breaks are created with the <br*> tag.
-- Ordered lists (<ol*>) are numbered and unordered lists (<ul*>) are bulleted.
-- Images (<img*>) and videos (<video*>) can be added by linking to an existing source.
+- Any visible content should be placed within the opening and closing ```<body>``` tags .
+- Headings and sub-headings, ```<h1>``` to ```<h6>``` tags, are used to enlarge text.
+- ```<p>```, ```<span>``` and ```<div>``` tags specify text or blocks.
+- The ```<em>``` and ```<strong>``` tags are used to emphasize text.
+- Line breaks are created with the ```<br>``` tag.
+- Ordered lists (```<ol>```) are numbered and unordered lists (```<ul>```) are bulleted.
+- Images (```<img>```) and videos (```<video>```) can be added by linking to an existing source.
 
 ### HTML Document Standards
 
@@ -261,19 +261,19 @@ HTML files require certain elements to set up the document properly. You can let
 
 The declaration looks like this:
 
-<!DOCTYPE html*>
+```<!DOCTYPE html*>```
 
-This declaration is an instruction, and it must be the first line of code in your HTML document. It tells the browser what type of document to expect, along with what version of HTML is being used in the document. For now, the browser will correctly assume that the html in <!DOCTYPE html> is referring to HTML5, as it is the current standard.
+This declaration is an instruction, and it must be the first line of code in your HTML document. It tells the browser what type of document to expect, along with what version of HTML is being used in the document. For now, the browser will correctly assume that the html in ```<!DOCTYPE html>``` is referring to HTML5, as it is the current standard.
 
-In the future, however, a new standard will override HTML5. To make sure your document is forever interpreted correctly, always include <!DOCTYPE html> at the very beginning of your HTML documents.
+In the future, however, a new standard will override HTML5. To make sure your document is forever interpreted correctly, always include ```<!DOCTYPE html>``` at the very beginning of your HTML documents.
 
 Lastly, HTML code is always saved in a file with an .html extension.
 
 #### The <html> tag
 
-The <!DOCTYPE html> declaration provides the browser with two pieces of information (the type of document and the HTML version to expect), but it doesn’t actually add any HTML structure or content.
+The ```<!DOCTYPE html>``` declaration provides the browser with two pieces of information (the type of document and the HTML version to expect), but it doesn’t actually add any HTML structure or content.
 
-To create HTML structure and content, we must add opening and closing <html> tags after declaring <!DOCTYPE html*>:
+To create HTML structure and content, we must add opening and closing ```<html>``` tags after declaring ```<!DOCTYPE html>```:
 
 ``` 
 <!DOCTYPE html>
@@ -281,20 +281,20 @@ To create HTML structure and content, we must add opening and closing <html> tag
 
 </html>
 ```
-Anything between the opening <html*> and closing </html*> tags will be interpreted as HTML code. Without these tags, it’s possible that browsers could incorrectly interpret your HTML code.
+Anything between the opening ```<html>``` and closing ```</html>``` tags will be interpreted as HTML code. Without these tags, it’s possible that browsers could incorrectly interpret your HTML code.
 
 #### The Head
 
 So far you’ve done two things to set up the file properly:
 
-- Declared to the browser that your code is HTML with <!DOCTYPE html*>
-- Added the HTML element (<html*>) that will contain the rest of your code.
+- Declared to the browser that your code is HTML with ```<!DOCTYPE html>```
+- Added the HTML element (```<html>```) that will contain the rest of your code.
 
 We have added these elements to the Brown Bears page you previously created. Now, let’s also give the browser some information about the page itself. We can do this by adding a <head*> element.
 
-Remember the <body*> tag? The <head*> element is part of this HTML metaphor. It goes above our <body*> element.
+Remember the ```<body>``` tag? The ```<head>``` element is part of this HTML metaphor. It goes above our ```<body>``` element.
 
-The <head*> element contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the <body*> tag, the metadata in the head is information about the page itself. You’ll see an example of this in the next exercise.
+The ```<head>``` element contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the ```<body>``` tag, the metadata in the head is information about the page itself. You’ll see an example of this in the next exercise.
 
 The opening and closing head tags typically appear as the first item after your first HTML tag:
 ```
@@ -304,11 +304,11 @@ The opening and closing head tags typically appear as the first item after your 
 
 #### Page Titles
 
-What kind of metadata about the web page can the <head*> element contain?
+What kind of metadata about the web page can the ```<head>``` element contain?
 
 If you navigate to the Codecademy catalog and look at the top of your browser, you’ll notice the words Catalog | Codecademy, which is the title of the web page.
 
-A browser’s tab displays the title specified in the <title*> tag. The <title*> tag is always inside of the <head*>.
+A browser’s tab displays the title specified in the ```<title>``` tag. The ```<title>``` tag is always inside of the ```<head>```.
 ```
 <!DOCTYPE html>
 <html>
@@ -324,16 +324,16 @@ If we were to open a file containing the HTML code in the example above, the bro
 Good work! Unfortunately, the browser panel used by the Codecademy environment does not have a title bar, so the “Brown Bear” title you wrote in the previous exercise will not be displayed. Outside of the Codecademy environment, however, your title would appear as depicted in the diagram to the right.
 
 So far, we have learned about:
-- <!DOCTYPE html*>, the declaration specifying the version of HTML for the browser
-- The <html*> tags that enclose all of your HTML code
-- The <head*> tag that contains the metadata of a webpage, such as its <title*>
+- ```<!DOCTYPE html>```, the declaration specifying the version of HTML for the browser
+- The ```<html>``` tags that enclose all of your HTML code
+- The ```<head>``` tag that contains the metadata of a webpage, such as its ```<title>```
 
 Next, you will learn about new types of elements that go inside the body.
 
 #### Linking to Other Web Pages
 
 One of the powerful aspects of HTML (and the Internet), is the ability to link to other web pages.
-You can add links to a web page by adding an **anchor element** <a*> and including the text of the link in between the opening and closing tags.
+You can add links to a web page by adding an **anchor element** ```<a>``` and including the text of the link in between the opening and closing tags.
 ```
 <a>This Is A Link To Wikipedia</a>
 ```
@@ -349,7 +349,7 @@ When reading technical documentation, you may come across the term hyperlink. No
 
 #### Opening Links in a New Window
 
-Have you ever clicked on a link and observed the resulting web page open in a new browser window? If so, you can thank the <a*> element’s target attribute. The target attribute specifies how a link should open.
+Have you ever clicked on a link and observed the resulting web page open in a new browser window? If so, you can thank the ```<a>``` element’s target attribute. The target attribute specifies how a link should open.
 
 It’s possible that one or more links on your web page link to an entirely different website. In that case, you may want users to read the linked website, but hope that they return to your web page. This is exactly when the target attribute is useful!
 
@@ -378,7 +378,7 @@ HTML files are often stored in the same folder, as shown in the example above. I
 ```
 <a href="./contact.html">Contact</a>
 ```
-In this example, the <a*> tag is used with a relative path to link from the current HTML file to the contact.html file in the same folder. On the web page, Contact will appear as a link.
+In this example, the ```<a>``` tag is used with a relative path to link from the current HTML file to the contact.html file in the same folder. On the web page, Contact will appear as a link.
 
 A relative path is a filename that shows the path to a local file (a file on the same website, such as ./index.html) versus an absolute path (a full URL, like https://www.codecademy.com/learn/learn-html which is stored in a different folder). The ./ in ./index.html tells the browser to look for the file in the current folder.
 
@@ -390,12 +390,12 @@ You’ve probably visited websites where not all links were made up of text. May
 ```
 Text-only links, however, would significantly decrease your flexibility as a web developer!
 
-Thankfully, HTML allows you to **turn nearly any element into a link by wrapping that element with an anchor element**. With this technique, it’s possible to turn images into links by simply wrapping the <img*> element with an <a*> element.
+Thankfully, HTML allows you to **turn nearly any element into a link by wrapping that element with an anchor element**. With this technique, it’s possible to turn images into links by simply wrapping the ```<img>``` element with an ```<a>``` element.
 
 ```
 <a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="#" alt="A red prickly pear fruit"/></a>
 ```
-In the example above, an image of a prickly pear has been turned into a link by wrapping the outside of the <img*> element with an <a*> element.
+In the example above, an image of a prickly pear has been turned into a link by wrapping the outside of the ```<img>``` element with an ```<a>``` element.
 
 #### Linking to Same Page
 
