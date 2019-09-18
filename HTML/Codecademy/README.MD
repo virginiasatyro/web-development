@@ -1,4 +1,4 @@
-# Coursera - Introduction to HTML
+# Codecademy - Introduction to HTML
 
 ## 1 ELEMENTS AND STRUCTURES
 
