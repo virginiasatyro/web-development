@@ -1,0 +1,347 @@
+1 - SITE STRUCTURE 
+	What are HTML and CSS?
+	
+		* HTML stands for Hyper Text Markup Language. 
+		It is used to give websites structure with text, links, images, and other fundamental elements.
+		* CSS stands for Cascading Style Sheets. It is used to change the appearance of HTML elements.
+
+	Anatomy of an HTML Element	
+	
+		<h1>You're Building a Website!</h1>
+		1 - All HTML elements begin with an opening tag. In this case, the opening tag is <h1>.
+		2 - Most elements require a closing tag, denoted by a /. In this case, the closing tag is </h1>.
+		3 - The website user only sees the content between the opening and closing tags. 
+		
+	Add a Heading
+	
+		There are six heading elements: h1, h2, h3, h4, h5, and h6. h1 is the largest heading and h6 is the smallest. 
+
+	Add a Paragraph
+	
+		<p>Paragraph text here</p>
+		he HTML paragraph element, p, is used to hold one or more sentences, just like paragraphs in an essay or a book. 
+		
+	Anchor Elements
+	
+		<a href="http://google.com">Click here for Google!</a>
+		Anchor elements use an attribute to link users to websites. 
+	
+	Adding Images
+	
+		<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-1/bikes1.jpg"/>
+		
+	Add a Video
+	
+		<video width="320" height="240" controls>
+		<source src="video-url.mp4" type="video/mp4">
+		</video>
+		
+	Create an Unordered List
+
+		<ul>
+			<li>A list item</li>
+			<li>A second list item</li>
+			<li>A third list item</li>
+		</ul> 
+		
+	Add a Div
+	
+		<div class="main">
+		...
+		</div>
+		Div elements divide your page by enclosing other elements. 
+		These enclosed groups of elements can then be organized, moved and styled independently from one another.
+		
+	Metadata: The Brains
+
+		1. <!DOCTYPE html>: Tells the web browser to expect an HTML document.
+		2. <html>...</html>: The root of the HTML document and parent of all other HTML elements on the webpage.
+		3. <head>...</head>: Enclose other metadata about the site, such as its title.
+		4. <title>...</title>: Contains the site’s title, which is one way users can find your site through a search engine, like Google.
+		5. <meta charset="utf-8"/>: Tells the web browser which character set to use. In this case, the character set is “utf-8”. 
+		
+		
+2 - A CLOSER LOOK AS CSS CD 
+	Why Use CSS?
+	
+		CSS is a language used to style websites.
+		Colors, fonts, and page layouts for a site can all be managed using CSS. 
+
+	Link to a Stylesheet
+	
+		The HTML link element links a CSS file to an HTML file so that CSS styling can be applied. 
+			<link rel="stylesheet" type="text/css" href="main.css"/>
+	
+	Anatomy of a CSS Rule
+	
+		The anatomy of a CSS rule:
+		* rule: a list of CSS instructions for how to style a specific HTML element or group of HTML elements.
+		* selector: specifies exactly which HTML elements to style. Here h1 is the selector.
+		* properties and values: located inside the { } brackets, properties and values specify what aspect of the selector to style. 
+		
+	font-family
+	
+			h1 {
+				font-family: Georgia, serif;
+			}
+	
+	color 
+	
+			h1 {
+				color: red;
+			}
+		1. Hexadecimal color (#RRGGBB): Hexadecimal values that represent mixtures of red, green and blue. 
+		2. RGB (Red, Green, Blue) colors: Color created by three numbers representing red, green, and blue.
+		
+	CSS Class Selectors
+	
+		We can use class selectors to target classes of HTML elements.
+			<div class="header">
+				<h2>Heading</h2>
+				<p>Paragraph</p>
+			</div>
+		Here, the div is the parent element and the h2 and p are children. 
+		CSS styles applied to the header class selector will automatically apply to the h2 and the p.
+			.header {
+				color: #ffffff; 
+			}
+			
+	font-size
+	
+			h1 {
+				font-size: 60px; 
+			}
+		1. pixel (px): Standard unit of measurement for sizing fonts and other HTML elements.
+		2. rem: Represents the default font size for the web browser. 
+		Rems can be used to ensure that HTML elements scale in proportion to each other on various web browsers and screen sizes.
+		3. em: A relative value that changes in proportion to the font-size of the element on which em is used. 
+			
+	A Background Image
+	
+		In CSS, the background-image property sets a background image of your choice for a given selector, as seen below.
+			.hero {
+				background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg");
+			}
+		To control the size of the chosen background image, use the property background-size:
+			background-size: cover;
+			
+	CSS id Selectors
+	
+		For example, to style one anchor element differently than all the others on a webpage, you could use the HTML id attribute:
+			<a id="learn-code" href="https://www.codecademy.com">Click here to learn to code!</a> 
+			#learn-code {
+				color: #2e69a3;  
+			}
+		1. An id attribute can only be used once because the id is unique to the element it is assigned to.
+		2. Ids have greater specificity than classes. 
+	
+	
+3 - BOUNDARIES AND SPACE 
+
+	The Box Model
+	
+		Every page element has boundary and space properties that can be controlled using CSS. 
+		Box model diagram:
+		* content: Includes text, images, or other media contained within an HTML element.
+		* padding: The space between the content and the border. You can think of this like inner space.
+		* border: The outline of an HTML page element. You can think of it like a picture frame that contains the element.
+		* margin: The space between the HTML page element and the next nearest element(s).
+
+	Create a Border	
+		
+		The border property can be used to visually define a page element’s outer edge.
+		In CSS, the border property’s value requires three parts:
+		* thickness: Sets the thickness of the border, using pixels, ems, or rems.
+		* type: Sets the border type. Common options are solid, dotted, and dashed. There are many others.
+		* color: Sets the border’s color, using named colors, HEX, or RGB values.
+			p {
+				border: 2px solid black; 
+			}
+			
+	Working with Padding
+
+		The CSS padding property controls the empty space between the page element’s content and its border. 
+		Increasing a page element’s padding makes the space around the content more spacious, while decreasing it makes the space more compact. 
+			p {
+				padding: 20px; 
+			}
+			
+	Working with Margin
+	
+		The CSS margin property controls the space between different HTML elements on a webpage. 
+		Use margin to bring page elements closer together or to move them further apart. 
+			.answer {
+				margin: 2rem;
+			}
+
+	More Margins
+	
+		Additional margin properties:
+		* margin-top: Sets the top margin.
+		* margin-bottom: Sets the bottom margin.
+		* margin-left: Sets the left margin.
+		* margin-right: Sets the right margin.
+
+	Understanding Display
+	
+		Using borders, padding, and margins allows us to control boundaries and space for individual HTML elements. 
+		Display types determine how HTML elements will be arranged in relation to each other.
+		The diagram to the right illustrates the block and inline display types.
+	
+	Keep It Inline
+	
+			li {
+				display: inline;
+			}
+			
+	Using Float
+	
+		By using float, we have the option of floating elements left or right. 
+			.logo {
+				float: left; 
+			}
+			#search-bar {
+				float: right; 
+			}
+			
+	Display: Flex
+	
+			.parent {
+				display: flex;
+				flex-wrap: wrap; 
+				justify-content: center;
+			}
+	
+	Working with Position
+	
+		The CSS position property enables you to position HTML elements in exact locations on a webpage. 
+		One useful value for this property is relative. 
+		This value positions page elements on a webpage relative to where they would normally appear!
+		By first setting position: relative;, you can then use the CSS properties top, left, bottom, and right to shift an element away from where it would have normally appeared on the page.
+			.container {
+				position: relative; 
+				top: 10px; 
+				left: 20px;
+			}
+			
+	Review
+
+		
+    CSS Box Model: illustrates the space and boundary properties of an HTML element that can be controlled using CSS.
+
+CSS Skills
+
+    * border: sets the outline of an HTML page element, like a picture frame that contains the element.
+    * padding: sets the amount of space between an element’s content and its border.
+    * margin: sets the amount of space between an HTML element and the next nearest element(s).
+    * display: property that determines how the selected element will be arranged in relation to other HTML elements on the page.
+    * inline: display value used to arrange HTML elements on the same line as neighboring elements.
+    * flex: display value that allows us to easily align multiple page elements vertically or horizontally.
+    * float: property used to float HTML elements left or right of neighboring elements.
+    * position: property used to position HTML elements in exact locations on a webpage.
+
+
+4 - BUILDING WITH BOOTSTRAP 
+
+	CSS Frameworks 
+		
+		Bootstrap is a popular CSS framework with prewritten CSS rules designed to help you build webpages faster. 
+		1. header: Used to organize headers on a webpage.
+		2. footer: Used to organize footers on a webpage.
+		3. section: Defines sections on a webpage.
+
+	Connecting to Bootstrap
+
+		Before Bootstrap can work for us, we need to link to it. 
+			<head>
+				... 
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+				...
+			</head>
+			
+	On the Grid
+	
+		One of the reasons Bootstrap and frameworks like it are so popular is because they offer grids. 
+		A grid makes it possible to organize HTML elements using preconfigured columns.
+		Using a grid, you can customize responsive page layouts quickly and reliably.
+		The Bootstrap grid contains 12 equal-sized columns, as seen in the diagram on the right.
+		HTML elements are arranged to span different numbers of columns in order to create custom page layouts. 
+		
+	Header/Navigation
+	
+		An HTML header element with Bootstrap’s predefined container class is used:
+			<header class="container">
+				...
+			</header>
+		Inside the header, a row is created by using a div with Bootstrap’s row class:
+			<header class="container">
+				<div class="row">
+				</div> 
+			</header>
+		Finally, the row is cut into two parts:
+			<header class="container">
+			  <div class="row">
+				<h1 class="col-sm-4">Heading</h1>
+				<nav class="col-sm-8 text-right">
+				  <p>nav item 1</p>
+				  <p>nav item 2</p>
+				  <p>nav item 3</p>
+				</nav> 
+			  </div>
+			</header>
+		The first part consists of the h1 with Bootstrap’s class col-sm-4. 
+		It will take up the first four columns on the grid. The second part consists of the nav element with class col-sm-8. 
+		It will take up the remaining eight grid columns .text-right indicates that text will be arranged on the right side of the nav. 
+		
+	The Jumbotron
+	
+		In addition to a header/navigation, many websites have a large showcase area featuring important content. 
+		Bootstrap refers to this as a jumbotron. 
+			<section class="jumbotron">
+				<div class="container">
+					<div class="row text-center">
+						...
+					</div>
+				</div>
+			</section>
+		
+	Supporting Content
+	
+		Many websites have a supporting content area.
+		Supporting content can be arranged using Bootstrap’s grid.
+		First, an HTML section element with the container class is used:
+			<section class="container">
+			</section>
+		Next, div elements with the row class are added:
+			<section class="container">
+			  <div class="row">
+			  </div>
+			  <div class="row">
+			  </div>
+			</section>
+			
+	Footers
+	
+		Footers display copyright information, social media links, and sometimes, site navigation. 
+		First, a footer element with Bootstrap’s container class is used:
+			<footer class="container">
+			</footer>
+		Inside the footer, a div with Bootstrap’s row class is added to hold footer content:
+			<footer class="container">
+			  <div class="row">
+			  ... 
+			  </div>
+			</footer>
+			
+	Bootstrap Generalizations
+	
+		Web Concepts
+		* CSS Framework: Set of prewritten CSS rules designed to help you build webpages faster.
+		* Bootstrap Grid: 12 equal-sized columns which can be utilized via Bootstrap classes to build responsive page layouts quickly and reliably.
+
+		Bootstrap classes
+		* row: Arranges HTML elements in rows, and can be useful when building headers/navigation menus, main feature sections, supporting content sections and footers.
+		* jumbotron: Used to create large showcase sections featuring important content.
+		* col-sm-*: Used to span a specified number of columns on the Bootstrap grid. The “sm” is short for “small”, and maintains desired CSS layouts on small screens (tablet-sized).
+		* text-right: Bootstrap class used to orient text to the right side of the webpage.
+		* btn btn-primary: Bootstrap class used to style page elements as buttons.

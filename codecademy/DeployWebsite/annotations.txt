@@ -1,0 +1,107 @@
+1 - CREATE A WEBSITE 
+	CREATE A STATIC WEBSITE USING JEKYLL
+	
+	Deploying: Overview 
+	
+		In this course, you’ll learn how to deploy a static site to the Internet.
+		Deploying means making content or software accessible and available for use. 
+		By the end of this course, you will have:
+		1. Generated a static site
+		2. Deployed it to the Internet
+		3. Given the website a custom domain name
+
+	Jekyll: Overview
+	
+		We’ll use a popular tool known as Jekyll to quickly generate a website.
+		Jekyll is a simple static site generator. Using Jekyll is a very common way of generating a “ready-to-publish static website” within seconds. 
+		It is possible to follow all of the steps outlined in this course with your own content — just make sure that your HTML is inside of a file called index.html. 
+		As you’ll see, even Jekyll uses a file called index.html.
+		
+	Installing Jekyll
+
+		Before we can generate a website, we must install Jekyll.
+		Jekyll is a Ruby gem (also known as a RubyGem) and can be installed from the command line. 
+			gem install jekyll
+	
+	Generate a Static Site 
+	
+		We’ll use Jekyll’s new command and specify a directory name. The directory will contain all of your site’s default content that can be customized later.
+		To generate a website in a directory called my-portfolio-site, we can type:
+			jekyll new my-portfolio-site
+		The command will create a directory called my-portfolio-site and fill it with Jekyll’s site content.
+		
+	Preview Your Site Locally 
+	
+		You can use Jekyll to view your site locally.
+		On the web, a server hosts your site’s files and makes your website available for everyone to see. 
+		You can view your site locally by using Jekyll’s serve command, like so:
+			jekyll serve
+		This command starts a local server that will server the files to your computer. 
+		The serve command will also come in handy when you want to preview changes you make to your site.
+		By default, the address for the local server that Jekyll’s serve command starts is http://localhost:4000/.
+
+	Jekyll's Directory Structure
+	
+		The website that Jekyll generates differs from a website that you’d create on your own.
+		It offers a standard directory structure, as well as components that help speed up development.
+		It’s important to understand Jekyll’s default directory structure and contents of your site:
+		1. _config.yml - This is a configuration file that contains many values that need to be edited only once. 
+		These values are used across your site, for example, your site’s title, your e-mail, and more. Note that this is a .yml file, which you can learn more about here.
+		2. _includes/ - This directory contains all the partials (code templates that keep you from repeating your code over and over) that your site uses to load common components, like the header and the footer.
+		3. _posts/ - This directory is where blog posts are stored. 
+		New blog posts can be added and will be rendered with the site’s styling, as long as the file name follows Jekyll’s standard naming convention.
+		4. _layouts/ - This directory contains templates that are used to style certain types of posts within the site. 
+		For example, new blog posts will use the HTML layout defined in post.html.
+		
+2 - DEPLOY YOUR WEBSITE 
+	DEPLOY YOUR WEBSITE TO GITHUB PAGES 
+	
+	Create A GitHub Account
+	
+	Create Your Repo
+	
+		A GitHub repository is an online, central storage place where you can store files and all the versions of those files. 
+		Your repo’s name must also follow GitHub Pages’ naming convention, otherwise your site will not publish at all.
+		Specifically, the repo’s name must be in the following format:
+			your-user-name.github.io
+		Note: For this course, do not initialize your repo with a README. If you do, you may run into errors later in the course.
+		
+	Initialize Your Repo
+	
+		We’ll use Git to push (upload) the contents of your site’s directory to your new repo.
+		
+	Add the Remote
+	
+		Next, Git needs to know what repo will store your site’s content.
+		In this case, the repo will be the one you created on GitHub earlier.
+		To specify the repo using Git, we’ll have to add the remote and label it as the origin.
+			git remote add origin https://github.com/your-user-name/your-user-name.github.io.git
+			git remote rm origin
+			git remote -v
+			
+	Commit Your Changes
+	
+		We want to push all of your site’s content to the repo. 
+		This means we will do the following two things (in order):
+		1. Add all of your site’s content to the Git staging area
+		2. Commit (save) your changes
+			git add .
+			git commit -m "Save my work"
+
+	Deploy Your Site
+	
+		We’ll use Git to help deploy your site. 
+		This time, we’ll use Git’s push command and push the contents of your site up to your repo using the following command:
+			git push -u origin master
+			
+	Review 
+	
+		The URL for your GitHub Pages site is: your-user-name.github.io, where your-user-name is your actual GitHub username.
+		Note that your site’s URL matches your repo’s name — a GitHub Pages requirement.
+		But what if you want to change the URL to a custom URL? 
+		Currently, the URL to your site is the GitHub Pages default URL. 
+	
+3 - CUSTOM DOMAIN NAMES	
+	ASSIGN A CUSTOM DOMAIN NAME TO YOUR WEBSITE
+
+
