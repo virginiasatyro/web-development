@@ -1,3 +1,0 @@
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\iterators7\obj\Debug\iterators7.njsproj.CoreCompileInputs.cache
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\iterators7\bin\Microsoft.NodejsTools.WebRole.dll
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\iterators7\obj\Debug\iterators7.njsprojAssemblyReference.cache

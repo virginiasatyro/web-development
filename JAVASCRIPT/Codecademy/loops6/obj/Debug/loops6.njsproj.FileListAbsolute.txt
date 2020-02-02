@@ -1,2 +1,0 @@
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\loops6\obj\Debug\loops6.njsproj.CoreCompileInputs.cache
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\loops6\bin\Microsoft.NodejsTools.WebRole.dll
