@@ -168,7 +168,8 @@ Exemplo:
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
-</ul>```
+</ul>
+```
 
  <ul>
   <li>Coffee</li>
@@ -176,7 +177,7 @@ Exemplo:
   <li>Milk</li>
 </ul> 
 
-- comportamento <i>inline</i> e <i>block</i>
+- comportamento ```inline``` e ```block```.
 
 [Exemplo](https://github.com/virginiasatyro/web-development/tree/master/alura/html-css-1/html-css-1-5)
 
