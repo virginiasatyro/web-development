@@ -51,6 +51,8 @@ Parágrafo:
 
 [Exemplo](https://github.com/virginiasatyro/web-development/blob/master/alura/html-css-1/html-css-1-1/index.html)
 
+<img src="https://raw.githubusercontent.com/virginiasatyro/web-development/master/alura/html-css-1/img/site-1-1.png">
+
 ### Aula 2 - Separando o conteúdo e informações
 
 ```<!DOCTYPE html>``` - Primeira definição a ser escrita no documento HTML - antes da tag ```<html>```. Adicionar essa tag, pois assim o navegador seberá que tipo de documento esperar. 
@@ -95,7 +97,7 @@ The content of the document......
 
 [Exemplo](https://github.com/virginiasatyro/web-development/tree/master/alura/html-css-1/html-css-1-2)
 
-<img src="//img/site-1-2.png">
+<img src="https://raw.githubusercontent.com/virginiasatyro/web-development/master/alura/html-css-1/img/site-1-2.png">
 
 ### Aula 3 - Trabalhando com CSS 
 
@@ -124,6 +126,8 @@ Mexer na apresentação dos textos:
 
 [Exemplo](https://github.com/virginiasatyro/web-development/tree/master/alura/html-css-1/html-css-1-3)
 
+<img src= "https://raw.githubusercontent.com/virginiasatyro/web-development/master/alura/html-css-1/img/site-1-3.png"> 
+
 ### Aula 4 - Estilizando imagens
 
 ```src="banner.jpg">``` - ```<img src="URL">```.
@@ -142,6 +146,8 @@ Time de Front-end
 - Desenvolvedor Front-end 
 
 [Exemplo](https://github.com/virginiasatyro/web-development/tree/master/alura/html-css-1/html-css-1-4)
+
+<img src= "https://raw.githubusercontent.com/virginiasatyro/web-development/master/alura/html-css-1/img/site-1-4.png"> 
 
 ### Aula 5 - Lista e divisões de conteúdo
 
@@ -174,6 +180,8 @@ Exemplo:
 
 [Exemplo](https://github.com/virginiasatyro/web-development/tree/master/alura/html-css-1/html-css-1-5)
 
+<img src="https://raw.githubusercontent.com/virginiasatyro/web-development/master/alura/html-css-1/img/site-1-5.png">
+
 ### Aula 6 - Finalizando a página
 
 ```<header></header>```
@@ -184,3 +192,5 @@ Exemplo:
 - O ideal é usarmos classes para tudo
 
 [Exemplo](https://github.com/virginiasatyro/web-development/tree/master/alura/html-css-1/html-css-1-6)
+
+<img src= "https://raw.githubusercontent.com/virginiasatyro/web-development/master/alura/html-css-1/img/site-1-6.png"> 
