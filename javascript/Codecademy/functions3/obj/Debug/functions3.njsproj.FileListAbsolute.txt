@@ -1,2 +1,0 @@
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\functions3\obj\Debug\functions3.njsproj.CoreCompileInputs.cache
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\functions3\bin\Microsoft.NodejsTools.WebRole.dll

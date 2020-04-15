@@ -1,3 +1,0 @@
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\introductionJS1\obj\Debug\introductionJS1.njsprojAssemblyReference.cache
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\introductionJS1\obj\Debug\introductionJS1.njsproj.CoreCompileInputs.cache
-C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\introductionJS1\bin\Microsoft.NodejsTools.WebRole.dll
