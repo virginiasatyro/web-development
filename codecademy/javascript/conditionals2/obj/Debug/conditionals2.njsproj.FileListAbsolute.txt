@@ -1,0 +1,3 @@
+C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\conditionals2\obj\Debug\conditionals2.njsprojAssemblyReference.cache
+C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\conditionals2\obj\Debug\conditionals2.njsproj.CoreCompileInputs.cache
+C:\GitHub\WebDevelopment\JAVASCRIPT\Codecademy\conditionals2\bin\Microsoft.NodejsTools.WebRole.dll
