@@ -891,13 +891,3 @@ When the link is clicked, the page will scroll down or up to the location with t
 
 - Use the ```id``` attribute (id="value") to define bookmarks in a page
 - Use the ```href``` attribute (href="#value") to link to the bookmark
-
-## HTML Images
-
-[HTML - Images - W3Schools.com](https://www.youtube.com/watch?v=FmoYRiepmOE&list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s&index=13)
-
-##
-
-##
-
-##
