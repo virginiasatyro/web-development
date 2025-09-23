@@ -230,9 +230,578 @@ function myFunction() {
 
 ### Background Images
 
-### The Picture Element
+A background image can be specified for almost any HTML element.
+
+#### Background Image on an HTML element
+
+```HTML
+<style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>
+```
+
+#### Background Image on a Page
+
+```HTML
+<style>
+body {
+  background-image: url('img_girl.jpg');
+}
+</style>
+```
+
+#### Background Repeat
+
+```HTML
+<style>
+body {
+  background-image: url('example_img_girl.jpg');
+}
+</style>
+```
+
+```HTML
+<!-- image wont repeat -->
+<style>
+body {
+  background-image: url('example_img_girl.jpg');
+  background-repeat: no-repeat;
+}
+</style>
+```
+
+#### Background Cover
+
+```HTML
+<style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+```
+
+#### Background Stretch
+
+Try resizing the browser window, and you will see that the image will stretch, but always cover the entire element.
+
+```HTML
+<style>
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+```
+
+### The ```<picture>``` Element
+
+The HTML ```<picture>``` element gives web developers more flexibility in specifying image resources.
+
+The ```<picture>``` element contains one or more ```<source>``` elements, each referring to different images through the ```srcset``` attribute. This way the browser can choose the image that best fits the current view and/or device.
+
+Each ```<source>``` element has a ```media``` attribute that defines when the image is the most suitable.
+
+```HTML
+<!-- Show different images for different screen sizes: -->
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture>
+```
+
+#### When to use the Picture Element
+
+There are two main purposes for the ```<picture>``` element:
+
+##### 1. Bandwidth
+
+If you have a small screen or device, it is not necessary to load a large image file. The browser will use the first ```<source>``` element with matching attribute values, and ignore any of the following elements.
+
+##### 2. Format Support
+
+Some browsers or devices may not support all image formats. By using the ```<picture>``` element, you can add images of all formats, and the browser will use the first format it recognizes, and ignore any of the following elements.
+
+```HTML
+<!-- The browser will use the first image format it recognizes: -->
+<picture>
+  <source srcset="img_avatar.png">
+  <source srcset="img_girl.jpg">
+  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+</picture>
+```
 
 [HTML - Images - W3Schools.com](https://www.youtube.com/watch?v=FmoYRiepmOE&list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s&index=13)
+
+## HTML Favicon
+
+A **favicon** is a small image displayed next to the page title in the browser tab.
+
+### How To Add a Favicon in HTML
+
+You can use any image you like as your favicon. You can also create your own favicon on sites like https://www.favicon.cc. A favicon is a small image, so it should be a simple image with high contrast.
+
+A common name for a favicon image is "favicon.ico".
+
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+```
+
+## HTML Page Title
+
+Every web page should have a page title to describe the meaning of the page.
+
+### The Title Element
+
+The ```<title>``` element adds a title to your page:
+
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Tutorial</title>
+</head>
+<body>
+
+The content of the document......
+
+</body>
+</html>
+```
+
+### What is a Good Title?
+
+The title should describe the content and the meaning of the page.
+
+The ```<title>``` element:
+
+- defines a title in the browser toolbar
+- provides a title for the page when it is added to favorites
+- displays a title for the page in search engine-results
+
+## HTML Tables
+
+### HTML Tables
+
+HTML tables allow web developers to arrange data into rows and columns.
+
+#### Define an HTML Table
+
+```HTML
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+```
+
+#### Table Cells
+
+Each table cell is defined by a ```<td>``` (table data) and a ```</td>``` tag.
+
+#### Table Rows
+
+Each table row starts with a ```<tr>``` (table row) and ends with a ```</tr>``` tag.
+
+#### HTML Table Tags
+
+| Tag         | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| `<table>`   | Defines a table                                                             |
+| `<th>`      | Defines a header cell in a table                                            |
+| `<tr>`      | Defines a row in a table                                                    |
+| `<td>`      | Defines a cell in a table                                                   |
+| `<caption>` | Defines a table caption                                                     |
+| `<colgroup>`| Specifies a group of one or more columns in a table for formatting          |
+| `<col>`     | Specifies column properties for each column within a `<colgroup>` element   |
+| `<thead>`   | Groups the header content in a table                                        |
+| `<tbody>`   | Groups the body content in a table                                          |
+| `<tfoot>`   | Groups the footer content in a table                                        |
+
+[HTML - ImTables - W3Schools.com](https://www.youtube.com/watch?v=e62D-aayveY&list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s&index=14)
+
+### HTML Table Borders
+
+HTML tables can have borders of different styles and shapes.
+
+#### How To Add a Border
+
+To add a border, use the CSS ```border``` property on ```table```, ```th```, and ```td``` elements:
+
+```CSS
+table, th, td {
+  border: 1px solid black;
+}
+```
+
+#### Collapsed Table Borders
+
+To avoid having double borders like in the example above, set the CSS ```border-collapse``` property to ```collapse```.
+
+This will make the borders collapse into a single border:
+
+```CSS
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+```
+
+#### Style Table Borders
+
+If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border:
+
+```CSS
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+```
+
+#### Round Table Borders
+
+```CSS
+table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+```
+
+```CSS
+<!-- Skip the border around the table by leaving out table from the css selector: -->
+th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+```
+
+#### Dotted Table Borders
+
+With the ```border-style``` property, you can set the appearance of the border: ```dotted```, ```dashed```, ```solid```, ```double```, ```groove```, ```ridge```, ```inset```, ```outset```, ```none```, ```hidden```.
+
+#### Border Color
+
+```CSS
+ th, td {
+  border-color: #96D4D4;
+}
+```
+
+### HTML Table Sizes
+
+HTML tables can have different sizes for each column, row or the entire table.
+
+#### HTML Table Width
+
+```HTML
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+```
+
+Note: Using a **percentage as the size unit for a width means how wide will this element be compared to its parent element**, which in this case is the ```<body>``` element.
+
+#### HTML Table Column Width
+
+```HTML
+<h2>Set the first column to 70% of the table width</h2>
+
+<table style="width:100%">
+  <tr>
+    <th style="width:70%">Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+```
+
+#### HTML Table Row Height
+
+```HTML
+<!-- Set the height of the second row to 200 pixels: -->
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr style="height:200px">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+```
+
+### HTML Table Headers
+
+HTML tables can have headers for each column or row, or for many columns/rows.
+
+#### HTML Table Headers
+
+Table headers are defined with ```th``` elements. Each ```th``` element represents a table cell.
+
+```HTML
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+``` 
+
+#### Vertical Table Headers
+
+To use the first column as table headers, define the first cell in each row as a ```<th>``` element:
+
+```HTML
+<table>
+  <tr>
+    <th>Firstname</th>
+    <td>Jill</td>
+    <td>Eve</td>
+  </tr>
+  <tr>
+    <th>Lastname</th>
+    <td>Smith</td>
+    <td>Jackson</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td>94</td>
+    <td>50</td>
+  </tr>
+</table>
+```
+
+#### Align Table Headers
+
+By default, table headers are bold and centered. To left-align the table headers, use the CSS ```text-align``` property:
+
+```CSS
+th {
+  text-align: left;
+}
+```
+
+#### Header for Multiple Columns
+
+You can have a header that spans over two or more columns. To do this, use the ```colspan``` attribute on the ```<th>``` element:
+
+```HTML
+<table>
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+```
+
+#### Table Caption
+
+You can add a caption that serves as a heading for the entire table. To add a caption to a table, use the ```<caption>``` tag:
+
+```HTML
+<table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+```
+
+### HTML Table Padding & Spacing
+
+HTML tables can adjust the padding inside the cells, and also the space between the cells.
+
+#### HTML Table - Cell Padding
+
+Cell padding is the space between the cell edges and the cell content. By default the padding is set to 0.
+
+To add padding on table cells, use the CSS ```padding``` property:
+
+```CSS
+th, td {
+  padding: 15px;
+}
+```
+
+```CSS
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+```
+
+#### HTML Table - Cell Spacing
+
+Cell spacing is the space between each cell. By default the space is set to 2 pixels.
+
+To change the space between table cells, use the CSS ```border-spacing``` property on the ```table``` element:
+
+```CSS
+table {
+  border-spacing: 30px;
+}
+```
+
+### HTML Table Colspan & Rowspan
+
+HTML tables can have cells that span over multiple rows and/or columns.
+
+#### HTML Table - Colspan
+
+To make a cell span over multiple columns, use the ```colspan``` attribute:
+
+```HTML
+<table>
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+  </tr>
+</table>
+```
+
+#### HTML Table - Rowspan
+
+To make a cell span over multiple rows, use the ```rowspan``` attribute:
+
+```CSS
+<table>
+  <tr>
+    <th>Name</th>
+    <td>Jill</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Phone</th>
+    <td>555-1234</td>
+  </tr>
+  <tr>
+    <td>555-8745</td>
+</tr>
+</table>
+```
+
+###
+
+###
+
+###
+
+##
+
+##
+
+##
+
+##
+
+##
 
 ##
 
