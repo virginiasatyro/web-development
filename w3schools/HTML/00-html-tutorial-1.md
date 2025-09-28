@@ -787,24 +787,118 @@ To make a cell span over multiple rows, use the ```rowspan``` attribute:
 </table>
 ```
 
-###
+### HTML Table Styling
 
-###
+Use CSS to make your tables look better.
 
-###
+#### HTML Table - Zebra Stripes
 
-##
+```CSS
+/* To style every other table row element, use the :nth-child(even) selector like this: */
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+```
 
-##
+#### HTML Table - Vertical Zebra Stripes
 
-##
+```CSS
+/* Set the :nth-child(even) for table data elements like this: */
+td:nth-child(even), th:nth-child(even) {
+  background-color: #D6EEEE;
+}
+```
 
-##
+#### Horizontal Dividers
 
-##
+```CSS
+tr {
+  border-bottom: 1px solid #ddd;
+}
+```
 
-##
+#### Hoverable Table
 
-##
+```CSS
+/* Use the :hover selector on tr to highlight table rows on mouse over: */
+tr:hover {background-color: #D6EEEE;}
+```
 
-##
+### HTML Table Colgroup
+
+The ```<colgroup>``` element is used to style specific columns of a table.
+
+#### HTML Table Colgroup
+
+```CSS
+<table>
+  <colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+  </colgroup>
+  <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+...
+```
+
+#### Legal CSS Properties
+
+There is only a very limited selection of CSS properties that are allowed to be used in the colgroup:
+
+- ```width``` property 
+- ```visibility``` property
+- ```background``` properties
+- ```border``` properties
+
+#### Multiple Col Elements
+
+```CSS
+/* If you want to style multiple columns with different styles, use more than one <col> element inside the <colgroup>: */
+<table>
+  <colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+    <col span="3" style="background-color: pink">
+  </colgroup>
+  <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+...
+```
+
+#### Empty Colgroups
+
+```CSS
+/* If you want to style columns in the middle of a table, insert an "empty" <col> element (with no styles) for the columns before: */
+<table>
+  <colgroup>
+    <col span="3">
+    <col span="2" style="background-color: pink">
+  </colgroup>
+  <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+...
+```
+
+#### Hide Columns
+
+```CSS
+/* You can hide columns with the visibility: collapse property: */
+<table>
+  <colgroup>
+    <col span="2">
+    <col span="3" style="visibility: collapse">
+  </colgroup>
+  <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+...
+```
